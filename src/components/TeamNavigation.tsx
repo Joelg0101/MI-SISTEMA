@@ -7,7 +7,7 @@ export function TeamNavigation() {
   const auth = useAuth(); const { navigate, currentPath } = useUI(); const [error, setError] = useState('');
   const links = [
     ['/catalogo','Catálogo',true],['/carrito','Carrito',true],['/panel','Panel',!!auth.profile],
-    ['/gestion-productos','Productos',auth.can('GERENCIA')],['/inventario','Inventario',auth.can('GERENCIA','ALMACEN')],
+    ['/gestion-productos','Productos',auth.can('GERENCIA')],['/analisis-ia','Análisis IA',auth.can('GERENCIA')],['/inventario','Inventario',auth.can('GERENCIA','ALMACEN')],
     ['/pedidos','Pedidos',auth.can('GERENCIA','VENTAS','ALMACEN')],['/reposicion','Reposición',auth.can('GERENCIA','ALMACEN')],
     ['/equipo','Equipo',auth.can('GERENCIA')],['/contactos','Contactos',auth.can('GERENCIA','VENTAS')],
   ] as const;
