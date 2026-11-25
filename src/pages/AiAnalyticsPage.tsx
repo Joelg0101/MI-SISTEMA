@@ -25,7 +25,7 @@ export function AiAnalyticsPage() {
     >
       <ResourceStatus
         loading={general.loading}
-        error={general.error ?? undefined}
+        error={general.error || ''}
         retry={general.refresh}
       />
 
